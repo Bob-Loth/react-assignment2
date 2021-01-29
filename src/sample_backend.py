@@ -24,8 +24,6 @@ def get_users():
         if search_username and search_job:
             result = User().find_by_name_job(search_username, search_job)  
         elif search_username:
-            # using list shorthand for filtering the list.
-            # TODO: Replace with database access
             result = User().find_by_name(search_username)
         else:
             result = User().find_all()
